@@ -1,1 +1,0 @@
-# bestprogramming_assignment
