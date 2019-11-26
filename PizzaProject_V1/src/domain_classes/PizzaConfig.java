@@ -5,15 +5,16 @@
  */
 package domain_classes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kayitare
  */
-public class PizzaConfig {
+public class PizzaConfig implements Serializable{
     
-     private double baseprice;   
+    private double baseprice;   
     private String size;
-    
     private double delivery;
     private String name;
     private OptionSet[] optionsets; 
