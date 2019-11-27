@@ -5,10 +5,29 @@
  */
 package decorator_vegetable;
 
+import interfaces.PizzaConfig;
+import pizza_decorator.PizzaDecorator;
+
 /**
  *
  * @author kayitare
  */
-public class PineapleDecorator {
+public class PineapleDecorator extends PizzaDecorator {
+    public PineapleDecorator(PizzaConfig decoratedPizza) {
+        super(decoratedPizza);
+    }
+    
+    @Override
+    public double price() {
+        return decoratedPizza.price()+120;
+    }
+
+    @Override
+    public String ingridients() {
+        return decoratedPizza.ingridients()+addPineaple();
+    }
+    public String addPineaple(){
+      return "Pineaple ";  
+    }
     
 }

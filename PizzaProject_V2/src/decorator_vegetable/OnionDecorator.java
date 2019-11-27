@@ -5,10 +5,28 @@
  */
 package decorator_vegetable;
 
+import interfaces.PizzaConfig;
+import pizza_decorator.PizzaDecorator;
+
 /**
  *
  * @author kayitare
  */
-public class OnionDecorator {
+public class OnionDecorator extends PizzaDecorator {
+    public OnionDecorator(PizzaConfig decoratedPizza) {
+        super(decoratedPizza);
+    }
+    @Override
+    public double price() {
+        return decoratedPizza.price()+100;
+    }
+
+    @Override
+    public String ingridients() {
+        return decoratedPizza.ingridients()+addOnion();
+    }
+    public String addOnion(){
+      return "Onion ";  
+    }
     
 }
