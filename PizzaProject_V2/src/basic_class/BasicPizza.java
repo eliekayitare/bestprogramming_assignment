@@ -4,11 +4,34 @@
  * and open the template in the editor.
  */
 package basic_class;
+import interfaces.PizzaConfig;
 
 /**
  *
  * @author kayitare
  */
-public class BasicPizza {
+
+public class BasicPizza  implements PizzaConfig  {
+ @Override
+    public double price() {
+        return 200;
+    }
+
+    @Override
+    public String ingridients() {
+        return "";
+    }
+
+    @Override
+    public String name() {
+        return " Pizza Name         :";
+    }
+
+    @Override
+    public String size() {
+       return " Pizza Size         :"; 
+    }
+
+
     
 }
