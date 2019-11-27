@@ -10,5 +10,10 @@ package interfaces;
  * @author kayitare
  */
 public interface PizzaConfig {
+    public String name();
+    public String size();
+    public double price();
+    public String ingridients();
+
     
 }
