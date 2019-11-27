@@ -5,10 +5,18 @@
  */
 package pizza_sizes;
 
+import interfaces.PizzaConfig;
+
 /**
  *
  * @author kayitare
  */
-public class Small {
-    
+public class Small extends pizza_decorator.PizzaDecorator{
+     public Small(PizzaConfig decoratedPizza) {
+        super(decoratedPizza);
+    }
+     @Override
+    public String size() {
+        return decoratedPizza.size()+" Small";
+    }
 }
