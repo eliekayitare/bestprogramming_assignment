@@ -5,10 +5,29 @@
  */
 package decorator_meat;
 
+import interfaces.PizzaConfig;
+import pizza_decorator.PizzaDecorator;
+
 /**
  *
  * @author kayitare
  */
-public class BeefDecorator {
+public class BeefDecorator extends PizzaDecorator {
+     public BeefDecorator(PizzaConfig decoratedPizza) {
+        super(decoratedPizza);
+    }
+     @Override
+    public double price() {
+        return decoratedPizza.price()+400;
+    }
+
+    @Override
+    public String ingridients() {
+        return decoratedPizza.ingridients()+addBeef();
+    }
+    public String addBeef(){
+      return "Beef ";  
+    }
+    
     
 }
