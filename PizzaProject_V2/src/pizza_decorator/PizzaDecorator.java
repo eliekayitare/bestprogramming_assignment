@@ -9,6 +9,32 @@ package pizza_decorator;
  *
  * @author kayitare
  */
-public class PizzaDecorator {
-    
+import interfaces.PizzaConfig;
+public class PizzaDecorator implements PizzaConfig {
+         protected PizzaConfig decoratedPizza;
+
+    public PizzaDecorator(PizzaConfig decoratedPizza) {
+        this.decoratedPizza = decoratedPizza;
+    }
+     
+    @Override
+    public double price() {
+        return decoratedPizza.price();
+    }
+
+    @Override
+    public String ingridients() {
+        return decoratedPizza.ingridients();
+    }
+
+    @Override
+    public String name() {
+       
+        return decoratedPizza.name();
+    }
+
+    @Override
+    public String size() {
+        return decoratedPizza.size();
+    }
 }

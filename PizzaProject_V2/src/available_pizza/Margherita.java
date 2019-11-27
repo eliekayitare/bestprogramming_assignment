@@ -4,11 +4,20 @@
  * and open the template in the editor.
  */
 package available_pizza;
-
+import interfaces.PizzaConfig;
 /**
  *
  * @author kayitare
  */
-public class Margherita {
+public class Margherita extends pizza_decorator.PizzaDecorator{
+  public Margherita(PizzaConfig decoratedPizza) {
+        super(decoratedPizza);
+    }
+
+    
+     @Override
+    public String name() {  
+        return decoratedPizza.name()+" Margherita";
+    }
     
 }
